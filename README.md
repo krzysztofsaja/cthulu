@@ -40,3 +40,11 @@ Do zarządzania stanem aplikacji możesz używać kontekstu, Redux lub innych na
 ## 9. Style
  
 Aplikację można stylizować za pomocą plików CSS, SCSS, lub innych preprocesorów. Pliki stylów znajdują się w katalogu `styles/`.
+
+## 10. Obsługa Bazy Danych
+ 
+Do obsługi bazy danych możesz używać bibliotek takich jak Axios, Fetch, lub narzędzi specyficznych dla bazy danych (np. Firebase).
+ 
+## 11. Testowanie
+ 
+Aplikację można testować za pomocą narzędzi takich jak Jest, React Testing Library lub inne odpowiednie narzędzia do testowania komponentów React.
