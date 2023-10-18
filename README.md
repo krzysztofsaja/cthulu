@@ -40,3 +40,39 @@ Do zarządzania stanem aplikacji możesz używać kontekstu, Redux lub innych na
 ## 9. Style
  
 Aplikację można stylizować za pomocą plików CSS, SCSS, lub innych preprocesorów. Pliki stylów znajdują się w katalogu `styles/`.
+## 1. Wprowadzenie
+
+Dokumentacja ta ma na celu dostarczenie informacji na temat projektu opartego na frameworku Next.js. Projekt ten jest stworzony w celu ułatwienia tworzenia nowoczesnych aplikacji internetowych z wykorzystaniem technologii React.
+
+## 2. Struktura Projektu
+
+```
+my-nextjs-project/
+|-- pages/
+|   |-- index.js
+|   |-- about.js
+|-- components/
+|   |-- Header.js
+|   |-- Footer.js
+|-- public/
+|   |-- images/
+|   |   |-- logo.png
+|-- styles/
+|   |-- global.css
+|-- package.json
+|-- next.config.js
+```
+
+- `pages/`: Katalog zawierający pliki zdefiniowane jako strony aplikacji.
+- `components/`: Katalog zawierający komponenty React używane w aplikacji.
+- `public/`: Katalog, w którym przechowujemy statyczne zasoby, takie jak obrazy.
+- `styles/`: Katalog zawierający pliki stylów aplikacji.
+- `package.json`: Plik konfiguracyjny projektu z listą zależności.
+- `next.config.js`: Plik konfiguracyjny Next.js.
+
+## 3. Narzędzia i Technologie
+
+- [Next.js](https://nextjs.org/): Framework React do budowania aplikacji internetowych.
+- [React](https://reactjs.org/): Biblioteka JavaScript do tworzenia interfejsów użytkownika.
+- [Node.js](https://nodejs.org/): Środowisko wykonawcze JavaScript po stronie serwera.
+- [npm](https://www.npmjs.com/): Menadżer pakietów JavaScript.
