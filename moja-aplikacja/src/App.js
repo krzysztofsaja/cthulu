@@ -15,8 +15,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Paprykarz
+          
         </a>
+        <div>
+      <button>Przycisk React</button>
+    </div>
       </header>
     </div>
   );
