@@ -76,3 +76,12 @@ my-nextjs-project/
 - [React](https://reactjs.org/): Biblioteka JavaScript do tworzenia interfejsów użytkownika.
 - [Node.js](https://nodejs.org/): Środowisko wykonawcze JavaScript po stronie serwera.
 - [npm](https://www.npmjs.com/): Menadżer pakietów JavaScript.
+
+test czy dziala u frankaaa
+## 6. Tworzenie Komponentów
+ 
+Każdy komponent React znajduje się w katalogu `components/`. Możesz tworzyć nowe komponenty i importować je w swoich plikach.
+ 
+## 7. Routing
+ 
+Next.js automatycznie obsługuje routing na podstawie plików w katalogu `pages/`. Na przykład, plik `pages/about.js` zostanie dostępny pod adresem `/about`.
