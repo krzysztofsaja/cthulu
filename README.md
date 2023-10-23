@@ -37,7 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
  
 Do zarządzania stanem aplikacji możesz używać kontekstu, Redux lub innych narzędzi dostępnych w ekosystemie React.
  
+
+
+ 
 ## 9. Style
+
 Aplikację można stylizować za pomocą plików CSS, SCSS, lub innych preprocesorów. Pliki stylów znajdują się w katalogu `styles/`.
 
 ## 10. Obsługa Bazy Danych
