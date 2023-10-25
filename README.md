@@ -79,3 +79,5 @@ my-nextjs-project/
 - [React](https://reactjs.org/): Biblioteka JavaScript do tworzenia interfejsów użytkownika.
 - [Node.js](https://nodejs.org/): Środowisko wykonawcze JavaScript po stronie serwera.
 - [npm](https://www.npmjs.com/): Menadżer pakietów JavaScript.
+
+test
