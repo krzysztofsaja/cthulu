@@ -1,7 +1,11 @@
 import { useForm } from "react-hook-form"
 
 export default function App() {
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit } = useForm({
+    firstName: '',
+    lastName: '',
+    age:0,
+  })
   const onSubmit = (data) => console.log(data)
 
   return (
