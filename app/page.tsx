@@ -1,9 +1,18 @@
-import Image from 'next/image'
+import Layout from "./layout";
+import IntroHeader from "@/src/shared/components/IntroHeader";
+import IntroContent from "../src/shared/components/IntroContent";
+import TopBar from "../src/shared/components/TopBar";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-hello paprykarz
+      <div className="intro-page">
+        <Layout>
+          <TopBar></TopBar>
+          <IntroHeader></IntroHeader>
+          <IntroContent></IntroContent>
+        </Layout>
+      </div>
     </main>
-  )
+  );
 }
