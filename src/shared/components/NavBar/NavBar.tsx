@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+"use client";
+
+import { useState } from "react";
 import "./NavBar.css";
 
 const Navbar = () => {
@@ -15,7 +17,9 @@ const Navbar = () => {
       {buttons.map((button, index) => (
         <button
           key={index}
-          className={`navbar-button button-character ${index === activeButtonIndex ? 'active' : ''}`}
+          className={`navbar-button button-character ${
+            index === activeButtonIndex ? "active" : ""
+          }`}
           onClick={() => handleButtonClick(index)}
         >
           {button}
