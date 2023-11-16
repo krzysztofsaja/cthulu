@@ -32,16 +32,16 @@
   background-size: 2.5rem;
 }
 .button-character:nth-child(1) {
-  background-image: url("../Images/character.png");
+  background-image: url("../../../Images/character.png");
 }
 .button-character:nth-child(2) {
-  background-image: url("../Images/skills.png");
+  background-image: url("../../../Images/skills.png");
 }
 .button-character:nth-child(3) {
-  background-image: url("../Images/eq.png");
+  background-image: url("../../../Images/eq.png");
 }
 .button-character:nth-child(4) {
-  background-image: url("../Images/backstory.png");
+  background-image: url("../../../Images/backstory.png");
 }
 .navbar-button.button-character.active {
   outline: 0.85rem solid;
