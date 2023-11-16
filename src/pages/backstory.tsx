@@ -1,10 +1,11 @@
+import Layout from "../shared/components/Layout";
+
 function BackstoryScreen() {
-    return (
-      <div>
-        <h1>Backstory Screen</h1>
-      </div>
-    );
-  }
-  
-  export default BackstoryScreen;
-  
+  return (
+    <Layout>
+      <h1>Backstory Screen</h1>
+    </Layout>
+  );
+}
+
+export default BackstoryScreen;

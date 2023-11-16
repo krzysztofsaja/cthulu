@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import Layout from "../shared/components/Layout";
 
 function CharacterSkill() {
   return (
-    <div>
+    <Layout>
       <h1>Character Skill</h1>
       <Link href="/backstory">Przejdź do historii postaci</Link>
-    </div>
+    </Layout>
   );
 }
 

@@ -1,7 +1,6 @@
 import IntroHeader from "@/src/shared/components/IntroHeader";
 import IntroContent from "../src/shared/components/IntroContent";
 import Layout from "@/src/shared/components/Layout";
-import Navbar from "../src/shared/components/NavBar/NavBar";
 
 export default function Home() {
   return (
@@ -10,7 +9,6 @@ export default function Home() {
         <Layout>
           <IntroHeader></IntroHeader>
           <IntroContent></IntroContent>
-          <Navbar></Navbar>
         </Layout>
       </div>
     </main>

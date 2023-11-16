@@ -1,7 +1,7 @@
 "use client";
-
 import { useState } from "react";
 import "./NavBar.css";
+import Link from "next/link";
 
 const Navbar = () => {
   const [activeButtonIndex, setActiveButtonIndex] = useState(null);
@@ -10,20 +10,23 @@ const Navbar = () => {
     setActiveButtonIndex(index);
   };
 
-  const buttons = ["", "", "", ""];
+  const buttons = [
+    { name: "Profile", link: "/character-profile" },
+    { name: "Backstory", link: "/backstory" },
+    { name: "Equipment", link: "/character-equipment" },
+    { name: "Skills", link: "/character-skills" },
+  ];
 
   return (
     <div className="navbar">
       {buttons.map((button, index) => (
-        <button
+        <Link
+          href={button.link}
           key={index}
           className={`navbar-button button-character ${
             index === activeButtonIndex ? "active" : ""
           }`}
-          onClick={() => handleButtonClick(index)}
-        >
-          {button}
-        </button>
+        ></Link>
       ))}
     </div>
   );
