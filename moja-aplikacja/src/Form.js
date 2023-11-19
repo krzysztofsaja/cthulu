@@ -1,3 +1,4 @@
+import React from "react";
 import { useForm } from "react-hook-form"
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
 // https://www.geeksforgeeks.org/how-to-upload-image-and-preview-it-using-reactjs/
 // https://www.youtube.com/watch?v=XlAs-Lid-TA
 
-  const [picture, setFile] = useState();
+  const [picture, setFile] = React.useState();
   const onSubmit = data => {
     console.log(data);
     console.log(data.target.files);
