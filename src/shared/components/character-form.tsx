@@ -1,8 +1,19 @@
+import { data } from "autoprefixer";
 import React from "react";
-import { useForm } from "react-hook-form"
+import { useForm, SubmitHandler, Controller } from "react-hook-form"
 
-export default function App() {
-  const { register, handleSubmit } = useForm({
+type FormData = {
+  firstName: string
+  description: string
+  age: undefined
+  gender: string
+  birthPlace: string
+  residence: string
+  picture: undefined
+}
+
+export default function App () {
+  const { register, setValue, handleSubmit, formState: { errors },} = useForm({
     defaultValues: {
         firstName: '',
         description: '',
@@ -10,20 +21,22 @@ export default function App() {
         gender: '',
         birthPlace: '',
         residence: '',
-        picture: undefined
-    }
+        picture: undefined,
+    },
   })
 // https://www.geeksforgeeks.org/how-to-upload-image-and-preview-it-using-reactjs/
 // https://www.youtube.com/watch?v=XlAs-Lid-TA
 
-  const [picture, setFile] = React.useState();
-  const onSubmit = data => {
-    console.log(data);
-    console.log(data.target.files);
-      setFile(URL.createObjectURL(data.target.files[0]));
-  }
+  const onSubmit = handleSubmit((data) => console.log(data))
+
+  // const [picture, setFile] = React.useState();
+  // const onSubmit = data => {
+  //   console.log(data);
+  //   console.log(data.target.files);
+  //     setFile(URL.createObjectURL(data.target.files[0]));
+  // }
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={onSubmit}>
       <h2>Set your Name:</h2>
       <input {...register("firstName", { required: true, maxLength: 20 })} />
       <h2>Describe your Character:</h2>
