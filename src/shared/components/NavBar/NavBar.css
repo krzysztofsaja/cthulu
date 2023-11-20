@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #271D1F;
+  padding: 10px;
+  margin-top: -10px;
+  padding-bottom: 30px;
+}
+
+.navbar-button {
+  background-color: #271D1F;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0;
+  margin-top: -20px;
+}
+
+.navbar-button:hover {
+  background-color: #2b2526;
+}
+.button-character {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 5rem;
+  height: 5rem;
+  background-size: 2.5rem;
+}
+.button-character:nth-child(1) {
+  background-image: url("../../../Images/character.png");
+}
+.button-character:nth-child(2) {
+  background-image: url("../../../Images/skills.png");
+}
+.button-character:nth-child(3) {
+  background-image: url("../../../Images/eq.png");
+}
+.button-character:nth-child(4) {
+  background-image: url("../../../Images/backstory.png");
+}
+.navbar-button.button-character.active {
+  outline: 0.85rem solid;
+  color: #84939A;
+}
