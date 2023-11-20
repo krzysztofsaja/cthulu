@@ -1,6 +1,7 @@
 import IntroHeader from "@/src/shared/components/IntroHeader";
 import IntroContent from "../src/shared/components/IntroContent";
 import Layout from "@/src/shared/components/Layout";
+import CharacterPic from "@/src/shared/components/CharacterPic";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="intro-page">
         <Layout>
           <IntroHeader></IntroHeader>
+          <CharacterPic></CharacterPic>
           <IntroContent></IntroContent>
         </Layout>
       </div>

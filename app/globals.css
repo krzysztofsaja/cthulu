@@ -6,14 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --goldbutton: rgba(197, 156, 113, 1);
+  --mainbg: rgba(132, 147, 154, 1);
+  --primarydark: rgba(39, 29, 31, 1);
+  --textbg: rgba(245, 245, 245, 1);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+

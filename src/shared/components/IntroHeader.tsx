@@ -4,6 +4,7 @@ const IntroHeader = () => {
   return (
     <header>
       <Image
+        className="AplicationLogo"
         src="/images/Logotype.svg"
         alt="Aplication Logo"
         height="92"

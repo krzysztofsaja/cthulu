@@ -1,0 +1,58 @@
+.topbar {
+    background-color: var(--primarydark);
+    height: 40px;
+    position: relative;
+    width: 375px;
+  }
+  
+  .topbar .character-profile {
+    color: #ffffff;
+    font-family: "Lexend-SemiBold", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    left: 111px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+  }
+  .characterpic {
+    height: 180px;
+    position: relative;
+    width: 125px;
+    left: 232px !important;
+    position: absolute !important;
+    top: 63px !important;
+  }
+  
+  .characterpic .call-of-cthulhu-logo {
+    height: 53px;
+    left: 0;
+    position: absolute;
+    top: 127px;
+    width: 125px;
+  }
+  
+  .characterpic .user-photo {
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 125px;
+  }
+
+  .intro-page {
+    background-color: var(--mainbg);
+    height: 667px;
+    position: relative;
+    width: 375px;
+  }
+
+  .AplicationLogo {
+    left: 64px !important;
+    position: absolute !important;
+    top: 29px !important;
+  }
+
+ 

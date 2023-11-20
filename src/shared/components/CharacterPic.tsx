@@ -1,22 +1,12 @@
 import Image from "next/image";
+import "./style.css";
 
 const CharacterPic = () => {
   return (
-    <div>
-      <Image
-        src="/images/characterPic.png"
-        alt="Picture of character"
-        height="120"
-        width="125"
-      />
-      <br />
-      <Image
-        src="/images/CthulhuLogo.png"
-        alt="CoC Logotype"
-        height="53"
-        width="125"
-      />
-    </div>
+    <div className="characterpic">
+    <Image className="call-of-cthulhu-logo" alt="Call of cthulhu logo" src="/images/CthulhuLogo.png" width="125" height="53" />
+    <Image className="user-photo" alt="User photo" src="/images/characterPic.png" height="180" width="125" />
+  </div>
   );
 };
 export default CharacterPic;
