@@ -5,8 +5,8 @@ import CharacterPic from "@/src/shared/components/CharacterPic";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="intro-page">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+      <div className="intro-page bg-mainbg w-[375px] h-[667px] relative">
         <Layout>
           <IntroHeader></IntroHeader>
           <CharacterPic></CharacterPic>

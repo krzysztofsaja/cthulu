@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{html,js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -12,6 +13,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+       colors:{
+    transparent: 
+    'transparent',
+    'white': '#ffffff',
+    'black': '#000000',
+    'primarydark': '#271D1F',
+    'goldbutton': '#C59C71',
+    'mainbg': '#84939A',
+    'textbg': '#F5F5F5',
+  }
     },
   },
   plugins: [],

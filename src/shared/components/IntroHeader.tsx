@@ -3,13 +3,10 @@ import Image from "next/image";
 const IntroHeader = () => {
   return (
     <header>
-      <Image
-        className="AplicationLogo"
-        src="/images/Logotype.svg"
-        alt="Aplication Logo"
-        height="92"
-        width="247"
-      />
+      <img 
+        className="!absolute !left-[64px] !top-[29px]"
+        alt="Logotype"
+        src="./images/Logotype.svg"/>
     </header>
   );
 };
