@@ -14,5 +14,14 @@ module.exports = {
       },
     },
   },
+  colors:{
+    transparent: 'transparent',
+    'white': '#ffffff',
+    'black': '#000000',
+    'primaryDark': '#271D1F',
+    'goldButton': '#C59C71',
+    'mainBg': '#84939A',
+    'textBg': '#F5F5F5',
+  }
   plugins: [],
 }
