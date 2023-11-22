@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Layout from "../shared/components/Layout";
-import CharacterForm from "./character-form";
+import CharacterForm from "../shared/components/character-form";
 
 
 function CharacterProfile() {
