@@ -3,7 +3,7 @@ import React from "react";
 import { useForm, handleSubmit, SubmitHandler, Controller } from "react-hook-form"
 
 type FormData = {
-  firstName: string
+  Name: string
   description: string
   age: undefined
   gender: string
@@ -15,7 +15,7 @@ type FormData = {
 export default function CharacterForm () {
   const { register, setValue, handleSubmit, formState: { errors },} = useForm({
     defaultValues: {
-        firstName: '',
+        Name: '',
         description: '',
         age:undefined,
         gender: '',
@@ -48,7 +48,7 @@ export default function CharacterForm () {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h2>Set your Name:</h2>
-      <input {...register("firstName", { required: true, maxLength: 20 })} />
+      <input {...register("Name", { required: true, maxLength: 20 })} />
       <h2>Describe your Character:</h2>
       <input {...register("description", { pattern: /^[A-Za-z]+$/i })} />
       <h2>Add Picture of your Character:</h2>
