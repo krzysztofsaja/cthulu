@@ -1,7 +1,17 @@
+import Link from "next/link";
+
 const IntroContent = () => {
   return (
     <div className="grow">
-      <p>Tutaj powinien być przycisk Create new character</p>
+      <p><Link href="/character-profile" style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '68px',
+        background: '#ffffff',
+        borderRadius: '3px',
+        fontWeight:"bold"
+      }}>Create new Character</Link></p>
       <p>Tutaj powinien być przycisk Choose character</p>
     </div>
   );
