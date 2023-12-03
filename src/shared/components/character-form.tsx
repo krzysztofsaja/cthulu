@@ -3,25 +3,23 @@ import React from "react";
 import { useForm, handleSubmit, SubmitHandler, Controller } from "react-hook-form"
 
 type FormData = {
-  firstName: string
-  description: string
-  age: undefined
-  gender: string
-  birthPlace: string
-  residence: string
-  picture: undefined
+  Name: string
+  Occupation: string
+  Age: undefined
+  Sex: string
+  BirthPlace: string
+  Residence: string
 }
 
 export default function CharacterForm () {
   const { register, setValue, handleSubmit, formState: { errors },} = useForm({
     defaultValues: {
-        firstName: '',
-        description: '',
-        age:undefined,
-        gender: '',
-        birthPlace: '',
-        residence: '',
-        picture: undefined,
+        Name: '',
+        Occupation: '',
+        Age:undefined,
+        Sex: '',
+        BirthPlace: '',
+        Residence: '',
     },
   })
 // https://www.geeksforgeeks.org/how-to-upload-image-and-preview-it-using-reactjs/
@@ -46,27 +44,32 @@ export default function CharacterForm () {
   //   alert(JSON.stringify(`${res.message}, status: ${res.status}`));
   // };
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>Set your Name:</h2>
-      <input {...register("firstName", { required: true, maxLength: 20 })} />
-      <h2>Describe your Character:</h2>
-      <input {...register("description", { pattern: /^[A-Za-z]+$/i })} />
-      <h2>Add Picture of your Character:</h2>
-      {/* <input ref={register} type="file" name="picture"/> */}
-      <input type="file" {...register("picture")}/>
-      <h2>Set age:</h2>
-      <input type="number" {...register("age", { min: 18, max: 99 })} />
-      <h2>Chose gender:</h2>
-      <select {...register("gender")}>
-        <option value="female">female</option>
-        <option value="male">male</option>
-        <option value="other">other</option>
-      </select>
-      <h2>Set birthplace:</h2>
-      <input {...register("birthPlace", { pattern: /^[A-Za-z]+$/i })} />
-      <h2>Set your Residence:</h2>
-      <input {...register("residence", { pattern: /^[A-Za-z]+$/i })} />
-      <input type="submit" />
-    </form>
+      <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="flex flex-row flex-wrap">
+          <div className="bg-textbg basis-full">
+            <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Name:</label><input className="border-none outline-none" {...register("Name", { required: true, maxLength: 20 })} />
+          </div>
+        <div className="bg-textbg basis-full">
+          <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Occupation:</label><input className="border-none outline-none" {...register("Occupation", { required: true, maxLength: 30 })} />
+        </div>
+        <div className="basis-1/2 bg-textbg">
+          <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Age:</label><input className="border-none outline-none" type="number" {...register("Age", { min: 18, max: 99 })} />
+        </div>
+        <div className="basis-1/5 bg-textbg">
+          <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Sex:</label><select className="border-none outline-none" {...register("Sex")}>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+        </div>
+        <div className="bg-textbg basis-full">
+          <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Birthplace:</label><input className="border-none outline-none" {...register("BirthPlace", { pattern: /^[A-Za-z]+$/i })} />
+        </div>
+        <div className="bg-textbg basis-full">
+          <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Residence:</label><input className="border-none outline-none" {...register("Residence", { pattern: /^[A-Za-z]+$/i })} />
+        </div>
+        <input type="submit" />
+      </div>
+      </form>
   )
 }

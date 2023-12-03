@@ -8,6 +8,8 @@ function CharacterProfile() {
     <Layout>
       <h1>Character</h1>
       <Link href="/character-equipment">Przejdź do ekwipunku postaci</Link>
+      <br/>
+      <br/>
       <CharacterForm></CharacterForm>
     </Layout>
   );
