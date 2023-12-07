@@ -1,5 +1,0 @@
-{
-    "characters":[
-        {"id": 1, "name": "Marcin Polak", "description": "Jest z Polski", "age": 35, "gender": "Male", "birthPlace": "Warszawa", "residence": "None", "picture": "zdjecie"}
-    ]
-}
