@@ -3,6 +3,14 @@ import { useEffect, useState } from "react";
 import Layout from "../shared/components/Layout";
 import CharacterForm from "../shared/components/character-form";
 import { fetchCharacters, ICharacter } from '../api-services/character.api-service';
+import { initializeApp } from 'firebase/app';
+
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  
+};
+
+const app = initializeApp(firebaseConfig);
 
 function CharacterProfile() {
 
