@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Layout from "../shared/components/Layout";
+import Link from "next/link";
+import Layout from "../../shared/components/Layout";
 
 function CharacterSkill() {
   return (

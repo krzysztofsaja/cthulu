@@ -1,5 +1,5 @@
+import Layout from "@/src/shared/components/Layout";
 import Link from "next/link";
-import Layout from "../shared/components/Layout";
 
 function CharacterEquipment() {
   return (
