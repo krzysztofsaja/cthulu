@@ -1,5 +1,4 @@
 import Layout from "@/src/shared/components/Layout";
-
 function BackstoryScreen() {
   return (
     <Layout>

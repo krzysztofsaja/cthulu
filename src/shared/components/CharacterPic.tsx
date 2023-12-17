@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const CharacterPic = () => {
   return (
-    <div>
+    <div className="flex-col justify-center items-center">
       <Image
         src="/images/characterPic.png"
         alt="Picture of character"
