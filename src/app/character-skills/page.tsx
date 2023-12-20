@@ -1,8 +1,10 @@
 // Import necessary modules and components
-import React, { useState } from 'react';
+"use client";
+
+import { useState } from "react";
 import Link from 'next/link';
 import Layout from '../../shared/components/Layout';
-import SearchBar from 
+import SearchBar from "@/src/shared/components/SearchBar/SearchBar";
 
 function CharacterSkill() {
   const [searchQuery, setSearchQuery] = useState('');
