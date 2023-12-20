@@ -4,9 +4,9 @@ import Navbar from "./NavBar/NavBar";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex justify-between flex-col h-screen">
+    <div className="flex min-h-screen flex-col items-center justify-betwee h-screen">
       <TopBar></TopBar>
-      {children}
+      <main className="p-24 flex-grow">{children}</main>
       <Navbar></Navbar>
     </div>
   );
