@@ -10,11 +10,12 @@ function CharacterSkill() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearchChange = (value) => {
+    console.log("Search", value);
     setSearchQuery(value);
   };
 
   const handleSearchSubmit = () => {
-    console.log('Searching for:', searchQuery);
+    console.log("Submit: Searching for:", searchQuery);
     // Add your search logic here
   };
 
