@@ -1,16 +1,23 @@
-import Link from "next/link";
 import Layout from "../../shared/components/Layout";
 import CharacterForm from "../../shared/components/character-form";
 import CharacterList from "./components/CharacterList/CharacterList";
+import CharacterPic from "@/src/shared/components/CharacterPic";
+import GoldButtons from "@/src/shared/components/GoldButtons";
+
 
 function CharacterProfile() {
   return (
     <Layout>
-      <h1>Character</h1>
-      <Link href="/character-equipment">Przejdź do ekwipunku postaci</Link>
-      <CharacterForm></CharacterForm>
-      <CharacterList></CharacterList>
+      <div className="flex flex-wrap justify-center -mt-14">
+      <div className="basis-2/3"><CharacterForm></CharacterForm></div>
+      <div className="ml-3"><CharacterPic></CharacterPic></div>
+      </div>
+      <div className="mt-10 ml-3 mr-3"><GoldButtons></GoldButtons></div>
+      <br/>
+      <br/>
+      tutaj powinny być buttony - characteristic/passive/active
     </Layout>
+    
   );
 }
 
