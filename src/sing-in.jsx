@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import { auth , googleProvider} from "../config/firebase";
 import { createUserWithEmailAndPassword,signInWithPopup, signOut } from "firebase/auth";
-import { useState } from "react";
 
-export const Auth = () => {
+export default Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
     console.log(auth?.currentUser?.email);
@@ -15,7 +15,11 @@ export const Auth = () => {
   };
   const signInWithGoogle = async () => {
     try {
-    await signInWithPopup(auth,googleProvider);
+    const result = await signInWithPopup(auth,googleProvider);
+
+    const {displayName, email, photoURL, uid} = result.user;
+
+    return uid;
     } catch (err){
       console.error(err);
     }
