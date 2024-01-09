@@ -1,16 +1,16 @@
-// Import necessary modules and components
-"use client";
 
-import { useState } from "react";
+"use client"
+import React, { useState } from "react";
 import Link from 'next/link';
 import Layout from '../../shared/components/Layout';
-import SearchBar from "@/src/shared/components/SearchBar/SearchBar";
+import Categories from '../../shared/components/Skill_categories';
+import SearchBar from '../../shared/components/SearchBar/SearchBar';
+
 
 function CharacterSkill() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleSearchChange = (value) => {
-    console.log("Search", value);
+  const handleSearchChange = (value: string) => {
     setSearchQuery(value);
   };
 
@@ -29,6 +29,9 @@ function CharacterSkill() {
         onSearchChange={handleSearchChange}
         onSearchSubmit={handleSearchSubmit}
       />
+
+      {/* Include the Categories component here */}
+      <Categories />
 
       <Link href="/backstory">Przejdź do historii postaci</Link>
     </Layout>
