@@ -1,12 +1,9 @@
 import React from "react";
-import  { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from './app/page';
-import LoginPage from './app/login';
-import { initializeApp } from 'firebase/app';
-import { config } from './firebaseConfig';
+import LoginPage from "./app/login";
 import AuthRoute from './app/auth-route/AuthRoute';
 
-initializeApp(config.firebaseConfig);
 
 export interface IApplicationProps {}
 

@@ -5,11 +5,11 @@ export const metadata = {
 // These styles apply to every route in the application
 import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import "../firebaseConfig";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  console.log("Main layout");
+
   return (
     <html lang="en">
       <body>{children}</body>
