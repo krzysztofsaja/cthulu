@@ -16,21 +16,21 @@ function CharacterSkill() {
 
   const handleSearchSubmit = () => {
     console.log("Submit: Searching for:", searchQuery);
-    // Add your search logic here
+    
   };
 
   return (
     <Layout>
       <h1>Character Skill</h1>
 
-      {/* Include the SearchBar component here */}
+      {}
       <SearchBar
         searchQuery={searchQuery}
         onSearchChange={handleSearchChange}
         onSearchSubmit={handleSearchSubmit}
       />
 
-      {/* Include the Categories component here */}
+      
       <Categories />
 
       <Link href="/backstory">Przejdź do historii postaci</Link>
