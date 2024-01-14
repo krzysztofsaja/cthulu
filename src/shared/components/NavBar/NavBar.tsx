@@ -12,9 +12,9 @@ const Navbar = () => {
 
   const buttons = [
     { name: "Profile", link: "/character-profile" },
-    { name: "Backstory", link: "/backstory" },
-    { name: "Equipment", link: "/character-equipment" },
     { name: "Skills", link: "/character-skills" },
+    { name: "Equipment", link: "/character-equipment" },
+    { name: "Backstory", link: "/backstory" },
   ];
 
   return (
