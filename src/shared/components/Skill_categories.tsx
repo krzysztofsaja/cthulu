@@ -1,4 +1,4 @@
-// Skill_categories.tsx
+
 import React from 'react';
 
 interface CategoryProps {
@@ -12,7 +12,7 @@ const Category: React.FC<CategoryProps> = ({ name, onClick }) => {
       className="cursor-pointer bg-white text-black w-84 h-26 p-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105 text-xs"
       onClick={onClick}
       style={{
-        borderRadius: '5px', // Dostosuj stopień zaokrąglenia tutaj
+        borderRadius: '5px', 
       }}
     >
       {name}
