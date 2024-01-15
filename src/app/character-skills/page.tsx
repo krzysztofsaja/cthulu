@@ -22,7 +22,7 @@ function CharacterSkill() {
   return (
     <Layout>
        <div className="flex-col items-center">     
-          <div className="-mt-20">
+          <div className="">
             {/* Include the SearchBar component here */}
             <SearchBar
               searchQuery={searchQuery}
