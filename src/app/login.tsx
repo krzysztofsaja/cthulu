@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 
 export interface ILoginPageProps {}
 
 const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
     const auth = getAuth();
-    const navigate = useNavigate();
     const [authing, setAuthing] = useState(false);
 
     const signInWithGoogle =async () => {
@@ -15,7 +13,7 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
         signInWithPopup(auth, new GoogleAuthProvider())
         .then((response) => {
             console.log(response.user.uid);
-            navigate('/');
+            // navigate('/');
         })
         .catch((error) => {
             console.log(error);

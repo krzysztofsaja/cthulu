@@ -7,9 +7,11 @@ import "./globals.css";
 
 import "../firebaseConfig";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  console.log("Main layout");
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>{children}</body>
