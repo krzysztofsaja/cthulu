@@ -13,7 +13,7 @@ const Category: React.FC<CategoryProps> = ({ name, percentage, onClick }) => {
       onClick={onClick}
       style={{
         borderRadius: '5px',
-        marginRight: '10px', // Dodaj odstęp na prawo
+        marginRight: '10px', 
       }}
     >
       {name} {percentage}
@@ -36,7 +36,7 @@ const SkillCategories: React.FC = () => {
 
   const handleAddCategory = () => {
     const newCategory = { name: 'New Category', percentage: '++%' };
-    setCategories([newCategory, ...categories]); // Dodaj nową kategorię na początku listy
+    setCategories([newCategory, ...categories]); 
   };
 
   return (
@@ -47,7 +47,7 @@ const SkillCategories: React.FC = () => {
           onClick={handleAddCategory}
           style={{
             borderRadius: '5px',
-            marginRight: '10px', // Dodaj odstęp na prawo
+            marginRight: '10px', 
           }}
         >
           Add Category
