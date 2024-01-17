@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 export interface ILoginPageProps {}
