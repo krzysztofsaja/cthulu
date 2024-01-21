@@ -21,35 +21,18 @@ function CharacterSkill() {
 
   return (
     <Layout>
-       <div className="flex-col items-center">     
-          <div className="">
-            {/* Include the SearchBar component here */}
-            <SearchBar
-              searchQuery={searchQuery}
-              onSearchChange={handleSearchChange}
-              onSearchSubmit={handleSearchSubmit}/>
-            </div>
-            <div className="">
-              tu powinny byc filtry kategorii
-            </div>
-            <div className="">
-              tu powinny być skills
-            </div>
-          
+    <div className="flex-col items-center">     
+      <div className="">
+        {}
+        <SearchBar
+          searchQuery={searchQuery}
+          onSearchChange={handleSearchChange}
+          onSearchSubmit={handleSearchSubmit}
+        />
+        </div>
       </div>
-      <h1>Character Skill</h1>
-
-      {}
-      <SearchBar
-        searchQuery={searchQuery}
-        onSearchChange={handleSearchChange}
-        onSearchSubmit={handleSearchSubmit}
-      />
-
-      
       <Categories />
-
-      <Link href="/backstory">Przejdź do historii postaci</Link>
+      
     </Layout>
   );
 }
