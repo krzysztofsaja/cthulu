@@ -1,11 +1,11 @@
 import Layout from "@/src/shared/components/Layout";
 import Link from "next/link";
+import { GearAndPossessions } from "./components/GearAndPossessions/GearAndPossessions";
 
 function CharacterEquipment() {
   return (
     <Layout>
-      <h1>Character Equipment</h1>
-      <Link href="/character-skill">Przejdź do umiejętności postaci</Link>
+      <GearAndPossessions></GearAndPossessions>
     </Layout>
   );
 }
