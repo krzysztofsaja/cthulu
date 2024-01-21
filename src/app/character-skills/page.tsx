@@ -21,19 +21,18 @@ function CharacterSkill() {
 
   return (
     <Layout>
-      <h1>Character Skill</h1>
-
-      {}
-      <SearchBar
-        searchQuery={searchQuery}
-        onSearchChange={handleSearchChange}
-        onSearchSubmit={handleSearchSubmit}
-      />
-
-      
+    <div className="flex-col items-center">     
+      <div className="">
+        {}
+        <SearchBar
+          searchQuery={searchQuery}
+          onSearchChange={handleSearchChange}
+          onSearchSubmit={handleSearchSubmit}
+        />
+        </div>
+      </div>
       <Categories />
-
-      <Link href="/backstory">Przejdź do historii postaci</Link>
+      
     </Layout>
   );
 }

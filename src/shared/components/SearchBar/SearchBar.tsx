@@ -1,6 +1,6 @@
 // SearchBar.tsx
 import React from 'react';
-import { CiSearch } from "react-icons/ci";
+import { IoSearch } from "react-icons/io5";
 
 interface SearchBarProps {
   searchQuery: string;
@@ -14,16 +14,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
   onSearchSubmit,
 }) => {
   return (
-    <div>
-      <input
+    <div className=" bg-textBg w-96 h-9 rounded p-2 flex items-center">
+      <button onClick={onSearchSubmit}>
+        <IoSearch />
+      </button>
+      <input className="pl-2 bg-textBg"
         type="text"
         placeholder="Search..."
         value={searchQuery}
-        onChange={(e) => onSearchChange(e.target.value)}
-      />
-      <button onClick={onSearchSubmit}>
-        <CiSearch />
-      </button>
+        onChange={(e) => onSearchChange(e.target.value)}/>
     </div>
   );
 };

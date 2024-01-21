@@ -8,7 +8,7 @@ import GoldButtons from "@/src/shared/components/GoldButtons";
 function CharacterProfile() {
   return (
     <Layout>
-      <div className="flex flex-wrap justify-center -mt-14">
+      <div className="flex flex-wrap justify-center">
       <div className="basis-2/3"><CharacterForm></CharacterForm></div>
       <div className="ml-3"><CharacterPic></CharacterPic></div>
       </div>
