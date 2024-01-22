@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import Layout from '../../shared/components/Layout';
 import Categories from '../../shared/components/Skill_categories';
-import SkillList from "@/src/shared/components/SkillsList";
 import SearchBar from '../../shared/components/SearchBar/SearchBar';
 
 
@@ -33,8 +32,6 @@ function CharacterSkill() {
         </div>
       </div>
       <Categories />
-      <SkillList></SkillList>
-      
     </Layout>
   );
 }
