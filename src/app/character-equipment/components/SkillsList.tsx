@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { text } from "stream/consumers";
 
 const Content1 = () => {
     const [spellName, setSpellName] = useState("");
@@ -7,10 +8,42 @@ const Content1 = () => {
 
     const [editMode, setEditMode] = useState(false);
     const [skills , setSkills] = useState([1,2,3]);
-    if (true){
+    async function getSkills() {
+      
+    }
+    async function addSkill() {
+      const data = {
+        name : spellName,
+        loss: sanityLoss,
+        cost: magicCost
+      }
+      //send Skill
+      setSkills((prevSkills) => [
+        ...prevSkills,
+        {name : spellName, loss: sanityLoss, cost: magicCost},
+      ]);
+    }
+    async function clearSkills() {
+      
+    }
+
+    if (editMode){
       return (
         <div className="">
-
+          <div className="">Edit Spell</div>
+          <div className="">
+            <div className="">Spell Name</div>
+            <input className="" type="text" placeholder="Enter new Name"/>
+          </div>
+          <div className="">
+            <div className="">Sanity Loss</div>
+            <input className="" type="text" placeholder="Enter new Value"/>
+          </div>
+          <div className="">
+            <div className="">Magic Cost</div>
+            <input className="" type="text" placeholder="Enter new Value"/>
+          </div>
+          <button className="">Save</button>
         </div>
       )
     }
@@ -68,9 +101,26 @@ const Content1 = () => {
                 return(
                     <div className="">
                         <div className="">
-
-                        <button className="">Edit</button>
-                        <button className="">Delete</button>
+                        <div className="">
+                            <div className="">
+                                <p>Spell name</p>
+                            </div>
+                            <div className="">skill.name</div>
+                            </div>
+                            <div className="">
+                                <div className="">
+                                    <p>Sanity loss</p>
+                                </div>
+                                <div className="">skill.loss</div>
+                            </div>
+                            <div className="">
+                                <div className="">
+                                    <p>Magic cost</p>
+                                </div>
+                                <div className="">skill.cost</div>
+                            </div>
+                          <button className="">Edit</button>
+                          <button className="">Delete</button>
                         </div>
                     </div>
                 )
