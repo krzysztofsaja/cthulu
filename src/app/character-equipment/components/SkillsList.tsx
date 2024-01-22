@@ -105,19 +105,19 @@ const Content1 = () => {
                             <div className="">
                                 <p>Spell name</p>
                             </div>
-                            <div className="">skill.name</div>
+                            <div className="">{skill.name}</div>
                             </div>
                             <div className="">
                                 <div className="">
                                     <p>Sanity loss</p>
                                 </div>
-                                <div className="">skill.loss</div>
+                                <div className="">{skill.loss}</div>
                             </div>
                             <div className="">
                                 <div className="">
                                     <p>Magic cost</p>
                                 </div>
-                                <div className="">skill.cost</div>
+                                <div className="">{skill.cost}</div>
                             </div>
                           <button className="">Edit</button>
                           <button className="">Delete</button>
