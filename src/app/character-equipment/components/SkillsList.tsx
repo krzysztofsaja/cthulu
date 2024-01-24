@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { text } from "stream/consumers";
 
-const Content1 = () => {
+const Skills = () => {
     const [spellName, setSpellName] = useState("");
     const [sanityLoss, setSanityLoss] = useState("");
     const [magicCost, setMagicCost] = useState("");
@@ -146,7 +146,7 @@ export default function SkillList() {
     <div>
       <div>
         <div onClick={toggleHandler(1)}>Spells</div>
-        {active === 1 && <Content1 />}
+        {active === 1 && <Skills />}
       </div>
       {/* <div onClick={toggleHandler(2)}>
         Click to show content 2{active === 2 && <Content2 />}
