@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { text } from "stream/consumers";
 
+export interface SkillType {
+  name: string;
+  loss: string;
+  cost: string;
+}
+
 const Skills = () => {
     const [spellName, setSpellName] = useState("");
     const [sanityLoss, setSanityLoss] = useState("");
     const [magicCost, setMagicCost] = useState("");
 
     const [editMode, setEditMode] = useState(false);
-    const [skills , setSkills] = useState([1,2,3]);
+    const [skills, setSkills] = useState<SkillType[]>([]);
     async function getSkills() {
       
     }
@@ -99,7 +105,7 @@ const Skills = () => {
         <div className="">
             {skills.map((skill,index)=>{
                 return(
-                    <div className="">
+                    <div key={`skill-${index}`} className="">
                         <div className="">
                         <div className="">
                             <div className="">
