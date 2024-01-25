@@ -2,7 +2,7 @@ import Layout from "@/src/shared/components/Layout";
 
 function CharacterEquipment() {
   return (
-    <Layout children={undefined}>
+    <Layout>
       <h1>Character Equipment</h1>
       <CharacterEquipment></CharacterEquipment>
     </Layout>
