@@ -1,6 +1,7 @@
+import CharacterEquipment from "@/src/shared/components/CharacterEquipment";
 import Layout from "@/src/shared/components/Layout";
 
-function CharacterEquipment() {
+function CharacterEquipmentPage() {
   return (
     <Layout>
       <h1>Character Equipment</h1>
@@ -9,4 +10,4 @@ function CharacterEquipment() {
   );
 }
 
-export default CharacterEquipment;
+export default CharacterEquipmentPage;
