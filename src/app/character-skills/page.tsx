@@ -1,12 +1,10 @@
-
 "use client";
-import Link from "next/link";
 import Layout from "../../shared/components/Layout";
-import SkillsCategorySection from "./components/SkillsCategorySection";
 
 function CharacterSkill() {
   return (
     <Layout>
+      <p>Character skills</p>
     </Layout>
   );
 }
