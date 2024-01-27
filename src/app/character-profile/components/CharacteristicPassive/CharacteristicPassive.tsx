@@ -3,6 +3,7 @@ import React, {useRef, useState} from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import {useForm} from "react-hook-form";
 
+
 export function CharacteristicPassive() {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const contentRef =  useRef(null);
@@ -40,11 +41,11 @@ export function CharacteristicPassive() {
     setIsCollapsed(!isCollapsed);
   }
 
-  function half(stat: number) {
+  function getHalfSkillValue(stat: number) {
     return Math.floor(Number(stat / 2));
   }
 
-  function lowestValue(stat: number) {
+  function getLowestSkillValue(stat: number) {
     return Math.floor(Number(stat / 5));
   }
 
@@ -52,7 +53,10 @@ export function CharacteristicPassive() {
     <div>
       <button className="bg-primary flex w-full h-10 items-center justify-center rounded-xl [font-family:'Lexend-Bold',Helvetica] font-bold text-white"
       onClick={toggleCollapse}>
-        <span className="ml-36">Characteristic Passive</span> <span className="ml-28" ><MdKeyboardArrowDown style={{fontSize: '32px', fontWeight: 'bold'}}/></span>
+        <span className="ml-36">Characteristic Passive</span> 
+        <span className="ml-28 text-3xl font-bold" >
+          <MdKeyboardArrowDown/>
+        </span>
       </button>
       <div className="collapse"
            style={{
@@ -77,8 +81,8 @@ export function CharacteristicPassive() {
                         onChange={(e) => handleCharacteristicChange(s, e.target.value)}
                       />
                       <div className="flex flex-col">
-                        <div className="bg-textBg w-9 h-7 mt-1 mb-1 rounded text-center">{half(characteristicValues[s])}</div>
-                        <div className="bg-textBg w-9 h-7 rounded text-center">{lowestValue(characteristicValues[s])}</div>
+                        <div className="bg-textBg w-9 h-7 mt-1 mb-1 rounded text-center">{getHalfSkillValue(characteristicValues[s])}</div>
+                        <div className="bg-textBg w-9 h-7 rounded text-center">{getLowestSkillValue(characteristicValues[s])}</div>
                       </div>
                     </div>
                   </div>
