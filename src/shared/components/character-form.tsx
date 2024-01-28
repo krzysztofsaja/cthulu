@@ -51,19 +51,19 @@ export default function CharacterForm() {
   // };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-    <div className="flex flex-col flex-wrap flex justify-center gap-3">
+    <div className="flex flex-col flex-wrap flex justify-center gap-3 font-custom">
         <div className="bg-textBg basis-full p-2 rounded">
-          <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Name: </label><input className="bg-textBg" {...register("Name", { required: true, maxLength: 20 })} />
+          <label className="font-semibold">Name: </label><input className="bg-textBg" {...register("Name", { required: true, maxLength: 20 })} />
         </div>
       <div className="bg-textBg basis-full p-2 rounded">
-        <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Occupation: </label><input className="bg-textBg" {...register("Occupation", { required: true, maxLength: 30 })} />
+        <label className="font-semibold">Occupation: </label><input className="bg-textBg" {...register("Occupation", { required: true, maxLength: 30 })} />
       </div>
       <div className="flex flex-row justify-center gap-4">
           <div className=" bg-textBg w-1/2 p-2 rounded h-10">
-            <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Age: </label><input className="bg-textBg w-1/2" type="number" {...register("Age", { min: 18, max: 99 })} />
+            <label className="font-semibold">Age: </label><input className="bg-textBg w-1/2" type="number" {...register("Age", { min: 18, max: 99 })} />
           </div>
           <div className="bg-textBg w-1/2 p-2 rounded h-10">
-            <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Sex: </label><select className="bg-textBg appearance-none" {...register("Sex")}>
+            <label className="font-semibold">Sex: </label><select className="bg-textBg appearance-none" {...register("Sex")}>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
@@ -71,10 +71,10 @@ export default function CharacterForm() {
           </div>
         </div>
       <div className="bg-textBg basis-full p-2 rounded">
-        <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Birthplace: </label><input className="bg-textBg" {...register("BirthPlace", { pattern: /^[A-Za-z]+$/i })} />
+        <label className="font-semibold">Birthplace: </label><input className="bg-textBg" {...register("BirthPlace", { pattern: /^[A-Za-z]+$/i })} />
       </div>
       <div className="bg-textBg basis-full p-2 rounded">
-        <label className="[font-family:'Lexend-Regular',Helvetica] font-normal text-black">Residence:</label><input className="bg-textBg" {...register("Residence", { pattern: /^[A-Za-z]+$/i })} />
+        <label className="font-semibold">Residence:</label><input className="bg-textBg" {...register("Residence", { pattern: /^[A-Za-z]+$/i })} />
       </div>
     </div>
     </form>

@@ -9,11 +9,11 @@ const GoldButtons = () => {
     console.log("zapisane");
   };
     return (
-      <div className="flex justify-between">
-      <button className="bg-secondary flex w-24 h-10 items-center justify-center rounded-xl [font-family:'Lexend-Bold',Helvetica] font-bold text-white" onClick={backClick}>
+      <div className="flex justify-between font-custom">
+      <button className="bg-secondary flex w-24 h-10 items-center justify-center rounded-xl font-bold text-white" onClick={backClick}>
         BACK
       </button>
-      <button id="save-button" className="bg-secondary flex w-24 h-10 items-center justify-center rounded-xl [font-family:'Lexend-Bold',Helvetica] font-bold text-white" onClick={saveClick}>
+      <button id="save-button" className="bg-secondary flex w-24 h-10 items-center justify-center rounded-xl font-bold text-white" onClick={saveClick}>
         SAVE
       </button>
     </div>
