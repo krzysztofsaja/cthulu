@@ -6,7 +6,6 @@ import SkillsCategorySection from "./components/SkillsCategorySection";
 function CharacterSkill() {
   return (
     <Layout>
-      <p>Character skills</p>
       <SkillsCategorySection></SkillsCategorySection>
     </Layout>
   );
