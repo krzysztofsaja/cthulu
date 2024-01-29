@@ -62,15 +62,26 @@ const Skills = () => {
         let skills = JSON.parse(tempskills);
         let curentSkill = skills.find((skill: SkillType) => skill.id == id)
         let index = skills.indexOf(curentSkill);
-        setEditMode(true);
         setEditSkillInfo({
-          id: skills[index].id,
+          id: new Date().getTime(),
           name: skills[index].name,
           loss: skills[index].loss,
           cost: skills[index].cost,
-        });        
-        localStorage.setItem('skills',JSON.stringify(skills));
+        });
+        setEditMode(true);
+        setEditSkillInfo({
+          id: new Date().getTime(),
+          name: skills[index].name,
+          loss: skills[index].loss,
+          cost: skills[index].cost,
+        });
+        if(editMode == false){
+          skills.splice(index,1);
+          skills.push(editSkillInfo)
+          localStorage.setItem('skills',JSON.stringify(skills))
+        }
       }
+      getSkills();
     }
     const deleteSkill = (id:number) => {
       let tempskills = localStorage.getItem('skills');
@@ -101,9 +112,10 @@ const Skills = () => {
             <div className="">Magic Cost</div>
             <input className="" type="text" placeholder="Enter new Value" value={editSkillInfo.cost} onChange={(e) => setEditSkillInfo({ ...editSkillInfo, cost: e.target.value})}/>
           </div>
-          <button className="">Save</button>
+          <button className="" onClick={() => setEditMode(false)}>Save</button>
         </div>
       )
+
     }
 
   return (
