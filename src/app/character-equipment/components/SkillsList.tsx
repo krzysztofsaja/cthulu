@@ -177,8 +177,8 @@ const Skills = () => {
                                 </div>
                                 <div className="">{skill.cost}</div>
                             </div>
-                          <button className="" onClick={() => editSkill(skill)} >Edit</button>
-                          <button className="" onClick={() => deleteSkill(skill)} >Delete</button>
+                          <button className="" onClick={() => editSkill(skill.id)} >Edit</button>
+                          <button className="" onClick={() => deleteSkill(skill.id)} >Delete</button>
                         </div>
                     </div>
                 )
