@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { text } from "stream/consumers";
+import { useEffect, useState } from "react";
+import { json, text } from "stream/consumers";
 
 export interface SkillType {
+  id: number;
   name: string;
   loss: string;
   cost: string;
@@ -13,24 +14,86 @@ const Skills = () => {
     const [magicCost, setMagicCost] = useState("");
 
     const [editMode, setEditMode] = useState(false);
+    const [editSkillInfo, setEditSkillInfo] = useState({
+      id: 0,
+      name: "",
+      loss: "",
+      cost: "",
+    })
     const [skills, setSkills] = useState<SkillType[]>([]);
-    async function getSkills() {
-      
+    
+    const getSkills = () => {
+      let tempskills = localStorage.getItem("skills");
+      console.log(tempskills);
+      if(tempskills == null) setSkills([]);
+      else setSkills(JSON.parse(tempskills));
     }
-    async function addSkill() {
-      const data = {
+
+    useEffect(() => {
+      getSkills();
+    }, [])
+
+    const addSkill = () => {
+      let data = {
+        id: new Date().getTime(),
         name : spellName,
         loss: sanityLoss,
         cost: magicCost
       }
-      //send Skill
-      setSkills((prevSkills) => [
-        ...prevSkills,
-        {name : spellName, loss: sanityLoss, cost: magicCost},
-      ]);
-    }
-    async function clearSkills() {
       
+      let localSkills = localStorage.getItem("skills");
+      if (localSkills == null) localStorage.setItem('skills',JSON.stringify([data]))
+      else {
+        let skills = JSON.parse(localSkills);
+        skills.push(data)
+        localStorage.setItem('skills',JSON.stringify(skills))
+      }
+      getSkills();
+    }
+    const clearSkills = () => {
+      localStorage.clear();
+      setSkills([]);
+      getSkills();
+    }
+
+    const editSkill = (id: number) => {
+      let tempskills = localStorage.getItem('skills');
+      if (tempskills) {
+        let skills = JSON.parse(tempskills);
+        let curentSkill = skills.find((skill: SkillType) => skill.id == id)
+        let index = skills.indexOf(curentSkill);
+        setEditSkillInfo({
+          id: new Date().getTime(),
+          name: skills[index].name,
+          loss: skills[index].loss,
+          cost: skills[index].cost,
+        });
+        setEditMode(true);
+        setEditSkillInfo({
+          id: new Date().getTime(),
+          name: skills[index].name,
+          loss: skills[index].loss,
+          cost: skills[index].cost,
+        });
+        if(editMode == false){
+          skills.splice(index,1);
+          skills.push(editSkillInfo)
+          localStorage.setItem('skills',JSON.stringify(skills))
+        }
+      }
+      getSkills();
+    }
+    const deleteSkill = (id:number) => {
+      let tempskills = localStorage.getItem('skills');
+      if (tempskills) {
+        let skills = JSON.parse(tempskills);
+        let curentSkill = skills.find((skill: SkillType) => skill.id == id)
+        let index = skills.indexOf(curentSkill);
+
+        skills.splice(index,1);
+        localStorage.setItem('skills',JSON.stringify(skills));
+        getSkills();
+      }
     }
 
     if (editMode){
@@ -39,19 +102,20 @@ const Skills = () => {
           <div className="">Edit Spell</div>
           <div className="">
             <div className="">Spell Name</div>
-            <input className="" type="text" placeholder="Enter new Name"/>
+            <input className="" type="text" placeholder="Enter new Name" value={editSkillInfo.name} onChange={(e) => setEditSkillInfo({ ...editSkillInfo, name: e.target.value})}/>
           </div>
           <div className="">
             <div className="">Sanity Loss</div>
-            <input className="" type="text" placeholder="Enter new Value"/>
+            <input className="" type="text" placeholder="Enter new Value" value={editSkillInfo.loss} onChange={(e) => setEditSkillInfo({ ...editSkillInfo, loss: e.target.value})}/>
           </div>
           <div className="">
             <div className="">Magic Cost</div>
-            <input className="" type="text" placeholder="Enter new Value"/>
+            <input className="" type="text" placeholder="Enter new Value" value={editSkillInfo.cost} onChange={(e) => setEditSkillInfo({ ...editSkillInfo, cost: e.target.value})}/>
           </div>
-          <button className="">Save</button>
+          <button className="" onClick={() => setEditMode(false)}>Save</button>
         </div>
       )
+
     }
 
   return (
@@ -99,8 +163,8 @@ const Skills = () => {
                     />
                 </div>
             </div>
-            <button className="">Add</button>
-            <button className="">Clear</button>
+            <button className="" onClick={() => addSkill()}>Add</button>
+            <button className="" onClick={() => clearSkills()} >Clear</button>
         </div>
         <div className="">
             {skills.map((skill,index)=>{
@@ -125,8 +189,8 @@ const Skills = () => {
                                 </div>
                                 <div className="">{skill.cost}</div>
                             </div>
-                          <button className="">Edit</button>
-                          <button className="">Delete</button>
+                          <button className="" onClick={() => editSkill(skill.id)} >Edit</button>
+                          <button className="" onClick={() => deleteSkill(skill.id)} >Delete</button>
                         </div>
                     </div>
                 )
