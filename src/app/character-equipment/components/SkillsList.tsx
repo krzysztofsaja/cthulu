@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { IoMdAddCircle } from "react-icons/io";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { json, text } from "stream/consumers";
 
 export interface SkillType {
@@ -215,8 +217,15 @@ export default function SkillList() {
   return (
     <div>
       <div>
-        <div onClick={toggleHandler(1)}>Spells</div>
+        <div className="bg-primary flex w-full h-10 items-center justify-center rounded-xl font-bold text-white mt-4"
+        onClick={toggleHandler(1)}>
+        <span className="ml-44">Spells</span> 
+        <span className="ml-36 mr-2 text-3xl font-bold" >
+          <MdKeyboardArrowDown/>
+        </span>
+        </div>
         {active === 1 && <Skills />}
+
       </div>
       {/* <div onClick={toggleHandler(2)}>
         Click to show content 2{active === 2 && <Content2 />}
