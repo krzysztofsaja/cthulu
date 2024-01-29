@@ -71,7 +71,7 @@ export function CharacteristicPassive() {
           <ul className="grid grid-cols-3 gap-3 mt-6 h-full place-items-center">
             {stats.map((s, index) => (
               <li key={index}>
-                <div className="flex flex-col mb-8 font-custom">
+                <div className="flex flex-col mb-8 font-primary">
                   <span className="bg-primary text-white text-center rounded-bl rounded-br w-24">{s}</span>
                     <div className="flex font-medium">
                       <input
