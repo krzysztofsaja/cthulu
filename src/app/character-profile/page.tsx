@@ -3,6 +3,7 @@ import CharacterForm from "../../shared/components/character-form";
 import CharacterList from "./components/CharacterList/CharacterList";
 import CharacterPic from "@/src/shared/components/CharacterPic";
 import GoldButtons from "@/src/shared/components/GoldButtons";
+import { CharacteristicPassive } from "./components/CharacteristicPassive/CharacteristicPassive";
 
 
 function CharacterProfile() {
@@ -13,9 +14,10 @@ function CharacterProfile() {
       <div className="ml-3"><CharacterPic></CharacterPic></div>
       </div>
       <div className="mt-10 ml-3 mr-3"><GoldButtons></GoldButtons></div>
-      <br/>
-      <br/>
-      tutaj powinny być buttony - characteristic/passive/active
+      <div className="mt-10">
+      <CharacteristicPassive></CharacteristicPassive>
+      </div>
+      tutaj powinna być lista characteristics active
     </Layout>
     
   );

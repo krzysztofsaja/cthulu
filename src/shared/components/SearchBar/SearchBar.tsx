@@ -14,7 +14,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   onSearchSubmit,
 }) => {
   return (
-    <div className=" bg-textBg w-96 h-9 rounded p-2 flex items-center">
+    <div className=" bg-textBg w-full h-9 rounded p-2 flex items-center">
       <button onClick={onSearchSubmit}>
         <IoSearch />
       </button>
